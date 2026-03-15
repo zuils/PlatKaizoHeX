@@ -43,6 +43,7 @@ namespace PKHeX.WinForms
             Menu_ShowdownExportParty = new System.Windows.Forms.ToolStripMenuItem();
             Menu_ShowdownExportCurrentBox = new System.Windows.Forms.ToolStripMenuItem();
             Menu_Data = new System.Windows.Forms.ToolStripMenuItem();
+            Menu_Find = new System.Windows.Forms.ToolStripMenuItem();
             Menu_LoadBoxes = new System.Windows.Forms.ToolStripMenuItem();
             Menu_DumpBoxes = new System.Windows.Forms.ToolStripMenuItem();
             Menu_DumpBox = new System.Windows.Forms.ToolStripMenuItem();
@@ -142,7 +143,7 @@ namespace PKHeX.WinForms
             // 
             // Menu_Tools
             // 
-            Menu_Tools.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { Menu_Showdown, Menu_Data, Menu_Folder });
+            Menu_Tools.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { Menu_Showdown, Menu_Data, Menu_Find, Menu_Folder });
             Menu_Tools.Name = "Menu_Tools";
             Menu_Tools.Size = new System.Drawing.Size(46, 20);
             Menu_Tools.Text = "Tools";
@@ -198,6 +199,13 @@ namespace PKHeX.WinForms
             Menu_Data.Name = "Menu_Data";
             Menu_Data.Size = new System.Drawing.Size(133, 22);
             Menu_Data.Text = "Data";
+            // 
+            // Menu_Find
+            // 
+            Menu_Find.Name = "Menu_Find";
+            Menu_Find.Size = new System.Drawing.Size(133, 22);
+            Menu_Find.Text = "Find";
+            Menu_Find.Click += MainMenuFind;
             // 
             // Menu_LoadBoxes
             // 
@@ -529,6 +537,7 @@ namespace PKHeX.WinForms
         private System.Windows.Forms.ToolStripMenuItem Menu_ShowdownExportParty;
         private System.Windows.Forms.ToolStripMenuItem Menu_Folder;
         private System.Windows.Forms.ToolStripMenuItem Menu_Data;
+        private System.Windows.Forms.ToolStripMenuItem Menu_Find;
         private System.Windows.Forms.ToolStripMenuItem Menu_LoadBoxes;
         private System.Windows.Forms.ToolStripMenuItem Menu_Report;
         private System.Windows.Forms.ToolStripMenuItem Menu_Database;

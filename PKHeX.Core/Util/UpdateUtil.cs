@@ -29,6 +29,6 @@ public static class UpdateUtil
             return null;
 
         var tagString = responseJson.AsSpan()[first..second];
-        return !Version.TryParse(tagString, out var latestVersion) ? null : latestVersion;
+        return null;
     }
 }

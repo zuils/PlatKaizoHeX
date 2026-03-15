@@ -1,4 +1,4 @@
-﻿Mystery Zone
+Mystery Zone
 Twinleaf Town
 Sandgem Town
 Floaroma Town
@@ -90,22 +90,22 @@ Valor Cavern
 Acuity Cavern
 Jubilife TV
 Pokétch Co.
-GTS
+Clamberclaw Cliffs
 Trainers’ School
 Mining Museum
 Flower Shop
 Cycle Shop
 Contest Hall
 Poffin House
-Foreign Building
+Celestica Ruins
 Pokémon Day Care
 Veilstone Store
 Game Corner
 Canalave Library
 Vista Lighthouse
-Sunyshore Market
+Distortion Zone 2
 Pokémon Mansion
-Footstep House
+Distortion Zone 1
 Café
 Grand Lake
 Restaurant
@@ -116,9 +116,9 @@ Battle Castle
 Battle Arcade
 Battle Hall
 Distortion World
-Global Terminal
-Villa
-Battleground
+Lost Tower
+The Underground
+Distortion Zone 3
 ROTOM’s Room
 T.G. Eterna Bldg
 Iron Ruins

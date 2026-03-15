@@ -372,6 +372,7 @@ namespace PKHeX.WinForms.Controls
             // TB_EVHP
             // 
             TB_EVHP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            TB_EVHP.Enabled = false;
             TB_EVHP.Location = new System.Drawing.Point(72, 0);
             TB_EVHP.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             TB_EVHP.Mask = "000";
@@ -616,6 +617,7 @@ namespace PKHeX.WinForms.Controls
             // TB_EVDEF
             // 
             TB_EVDEF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            TB_EVDEF.Enabled = false;
             TB_EVDEF.Location = new System.Drawing.Point(72, 0);
             TB_EVDEF.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             TB_EVDEF.Mask = "000";
@@ -761,6 +763,7 @@ namespace PKHeX.WinForms.Controls
             // TB_EVSPA
             // 
             TB_EVSPA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            TB_EVSPA.Enabled = false;
             TB_EVSPA.Location = new System.Drawing.Point(72, 0);
             TB_EVSPA.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             TB_EVSPA.Mask = "000";
@@ -883,6 +886,7 @@ namespace PKHeX.WinForms.Controls
             // TB_EVSPD
             // 
             TB_EVSPD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            TB_EVSPD.Enabled = false;
             TB_EVSPD.Location = new System.Drawing.Point(72, 0);
             TB_EVSPD.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             TB_EVSPD.Mask = "000";
@@ -1371,7 +1375,7 @@ namespace PKHeX.WinForms.Controls
             FLP_PKMEditors.AutoSize = true;
             FLP_PKMEditors.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             FLP_PKMEditors.Controls.Add(BTN_RandomIVs);
-            FLP_PKMEditors.Controls.Add(BTN_RandomEVs);
+            // FLP_PKMEditors.Controls.Add(BTN_RandomEVs);
             FLP_PKMEditors.Controls.Add(BTN_RandomAVs);
             FLP_PKMEditors.Location = new System.Drawing.Point(32, 0);
             FLP_PKMEditors.Margin = new System.Windows.Forms.Padding(0);

@@ -276,6 +276,12 @@ public partial class Main : Form
             new SAV_Database(PKME_Tabs, C_SAV).Show();
     }
 
+    private void MainMenuFind(object sender, EventArgs e)
+    {
+        if (!this.OpenWindowExists<SAV_Find>())
+            new SAV_Find(PKME_Tabs, C_SAV).ShowDialog();
+    }
+
     private void Menu_EncDatabase_Click(object sender, EventArgs e)
     {
         if (this.OpenWindowExists<SAV_Encounters>())
@@ -796,7 +802,7 @@ public partial class Main : Form
         var v = Program.CurrentVersion;
         string version = $"{2000+v.Major:00}{v.Minor:00}{v.Build:00}";
 #endif
-        return $"PKH{(HaX ? "a" : "e")}X ({version})";
+        return $"PlatKaizoH{(HaX ? "a" : "e")}X ({version})";
     }
 
     private static string GetProgramTitle(SaveFile sav)

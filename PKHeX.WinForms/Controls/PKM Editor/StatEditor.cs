@@ -20,16 +20,12 @@ public partial class StatEditor : UserControl
         MT_Stats = [Stat_HP, Stat_ATK, Stat_DEF, Stat_SPE, Stat_SPA, Stat_SPD];
         L_Stats = [Label_HP, Label_ATK, Label_DEF, Label_SPE, Label_SPA, Label_SPD];
         MT_Base = [TB_BaseHP, TB_BaseATK, TB_BaseDEF, TB_BaseSPE, TB_BaseSPA, TB_BaseSPD];
-
-        TB_BST.ResetForeColor();
-        TB_IVTotal.ForeColor = TB_EVTotal.ForeColor = MT_EVs[0].ForeColor;
-
-        foreach (var iv in MT_IVs)
-            iv.MouseWheel += WinFormsUtil.MouseWheelIncrement1;
+            
         foreach (var ev in MT_EVs)
-            ev.MouseWheel += WinFormsUtil.MouseWheelIncrement4;
-        foreach (var av in MT_AVs)
-            av.MouseWheel += WinFormsUtil.MouseWheelIncrement1;
+        {
+            ev.Enabled = false;
+            ev.BackColor = SystemColors.Control;
+        }
         foreach (var gv in MT_GVs)
             gv.MouseWheel += WinFormsUtil.MouseWheelIncrement1;
     }
@@ -681,9 +677,6 @@ public partial class StatEditor : UserControl
         Label_AVs.Visible = TB_AVTotal.Visible = BTN_RandomAVs.Visible = showAV;
         foreach (var mtb in MT_AVs)
             mtb.Visible = showAV;
-        Label_EVs.Visible = TB_EVTotal.Visible = BTN_RandomEVs.Visible = !showAV;
-        foreach (var mtb in MT_EVs)
-            mtb.Visible = !showAV;
 
         FLP_PKMEditors.PerformLayout();
 

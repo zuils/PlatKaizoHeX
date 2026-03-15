@@ -37,6 +37,11 @@ public sealed class ShowdownSet : IBattleTemplate
     public Nature Nature { get; private set; } = Nature.Random;
     public string FormName { get; private set; } = string.Empty;
     public byte Form { get; private set; }
+    public ushort MetLocation { get; private set; }
+    public bool MetLocationIsEgg { get; private set; }
+    public byte MetLocationFormat { get; private set; }
+    public byte MetLocationGeneration { get; private set; }
+    public GameVersion MetLocationGameVersion { get; private set; }
     public int[] EVs { get; } = [00, 00, 00, 00, 00, 00];
     public int[] IVs { get; } = [31, 31, 31, 31, 31, 31];
     public sbyte HiddenPowerType { get; private set; } = -1;
@@ -299,19 +304,20 @@ public sealed class ShowdownSet : IBattleTemplate
 
     private bool ParseEntry(BattleTemplateToken token, ReadOnlySpan<char> value, BattleTemplateLocalization localization) => token switch
     {
-        BattleTemplateToken.Ability       => ParseLineAbility(value, localization.Strings.abilitylist),
-        BattleTemplateToken.Nature        => ParseLineNature(value, localization.Strings.natures),
-        BattleTemplateToken.Shiny         => Shiny         = true,
-        BattleTemplateToken.Gigantamax    => CanGigantamax = true,
-        BattleTemplateToken.HeldItem      => ParseItemName(value, localization.Strings),
-        BattleTemplateToken.Nickname      => ParseNickname(value),
-        BattleTemplateToken.Gender        => ParseGender(value, localization.Config),
-        BattleTemplateToken.Friendship    => ParseFriendship(value),
-        BattleTemplateToken.EVs           => ParseLineEVs(value, localization),
-        BattleTemplateToken.IVs           => ParseLineIVs(value, localization.Config),
-        BattleTemplateToken.Level         => ParseLevel(value),
-        BattleTemplateToken.DynamaxLevel  => ParseDynamax(value),
-        BattleTemplateToken.TeraType      => ParseTeraType(value, localization.Strings.types),
+        BattleTemplateToken.Ability => ParseLineAbility(value, localization.Strings.abilitylist),
+        BattleTemplateToken.MetLocation => ParseLineMetLocation(value, localization.Strings),
+        BattleTemplateToken.Nature => ParseLineNature(value, localization.Strings.natures),
+        BattleTemplateToken.Shiny => Shiny = true,
+        BattleTemplateToken.Gigantamax => CanGigantamax = true,
+        BattleTemplateToken.HeldItem => ParseItemName(value, localization.Strings),
+        BattleTemplateToken.Nickname => ParseNickname(value),
+        BattleTemplateToken.Gender => ParseGender(value, localization.Config),
+        BattleTemplateToken.Friendship => ParseFriendship(value),
+        BattleTemplateToken.EVs => ParseLineEVs(value, localization),
+        BattleTemplateToken.IVs => ParseLineIVs(value, localization.Config),
+        BattleTemplateToken.Level => ParseLevel(value),
+        BattleTemplateToken.DynamaxLevel => ParseDynamax(value),
+        BattleTemplateToken.TeraType => ParseTeraType(value, localization.Strings.types),
         _ => false,
     };
 
@@ -331,6 +337,29 @@ public sealed class ShowdownSet : IBattleTemplate
 
         Ability = index;
         return true;
+    }
+
+    private bool ParseLineMetLocation(ReadOnlySpan<char> value, GameStrings strings)
+    {
+        // Try to find the provided met-location string across known generation location name sets.
+        // We search generations 2..9 with GameVersion.Any as a best-effort search for matching name.
+        for (byte gen = 2; gen <= 9; gen++)
+        {
+            var names = strings.GetLocationNames(gen, GameVersion.Any);
+            if (names.Length == 0)
+                continue;
+            var index = StringUtil.FindIndexIgnoreCase(names, value);
+            if (index >= 0)
+            {
+                MetLocation = (ushort)index;
+                MetLocationIsEgg = false; // assume non-egg unless explicitly specified elsewhere
+                MetLocationFormat = gen; // best-effort: use matched generation as format
+                MetLocationGeneration = gen;
+                MetLocationGameVersion = GameVersion.Any;
+                return true;
+            }
+        }
+        return false;
     }
 
     private bool ParseLineNature(ReadOnlySpan<char> value, ReadOnlySpan<string> natureNames)
@@ -609,6 +638,12 @@ public sealed class ShowdownSet : IBattleTemplate
                 result.Add(cfg.Push(token, Gender == 0 ? cfg.Male : cfg.Female));
                 break;
 
+            case BattleTemplateToken.MetLocation when MetLocation > 0:
+                var loc = strings.GetLocationName(MetLocationIsEgg, MetLocation, MetLocationFormat, MetLocationGeneration, MetLocationGameVersion);
+                if (!string.IsNullOrEmpty(loc))
+                    result.Add(cfg.Push(token, loc));
+                break;
+
             case BattleTemplateToken.AbilityHeldItem when Ability >= 0 || HeldItem > 0:
                 result.Add(GetAbilityHeldItem(strings, Ability, HeldItem, Context));
                 break;
@@ -810,6 +845,13 @@ public sealed class ShowdownSet : IBattleTemplate
         Friendship = pk.CurrentFriendship;
         Level = pk.CurrentLevel;
         Shiny = pk.IsShiny;
+
+        // Met location metadata
+        MetLocation = pk.MetLocation;
+        MetLocationIsEgg = pk.IsEgg;
+        MetLocationFormat = pk.Format;
+        MetLocationGeneration = pk.Context.Generation();
+        MetLocationGameVersion = pk.Version;
 
         if (pk is PK8 g) // Only set Gigantamax if it is a PK8
         {

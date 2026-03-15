@@ -2,14 +2,14 @@
 Pound
 Karate Chop
 Double Slap
-Comet Punch
+Water Ball
 Mega Punch
 Pay Day
 Fire Punch
 Ice Punch
 Thunder Punch
 Scratch
-Vise Grip
+ViceGrip
 Guillotine
 Razor Wind
 Swords Dance
@@ -18,7 +18,7 @@ Gust
 Wing Attack
 Whirlwind
 Fly
-Bind
+Mystical Fire
 Slam
 Vine Whip
 Stomp
@@ -28,7 +28,7 @@ Jump Kick
 Rolling Kick
 Sand Attack
 Headbutt
-Horn Attack
+Fire Ball
 Fury Attack
 Horn Drill
 Tackle
@@ -109,7 +109,7 @@ Minimize
 Smokescreen
 Confuse Ray
 Withdraw
-Defense Curl
+Rock Ball
 Barrier
 Light Screen
 Haze
@@ -128,8 +128,8 @@ Fire Blast
 Waterfall
 Clamp
 Swift
-Skull Bash
-Spike Cannon
+Solar-Beam
+Hail Ball
 Constrict
 Amnesia
 Kinesis
@@ -138,7 +138,7 @@ High Jump Kick
 Glare
 Dream Eater
 Poison Gas
-Barrage
+Hurricane
 Leech Life
 Lovely Kiss
 Sky Attack
@@ -147,8 +147,8 @@ Bubble
 Dizzy Punch
 Spore
 Flash
-Psywave
-Splash
+Triple Axel
+HP Water
 Acid Armor
 Crabhammer
 Explosion
@@ -158,7 +158,7 @@ Rest
 Rock Slide
 Hyper Fang
 Sharpen
-Conversion
+HP Ice
 Tri Attack
 Super Fang
 Slash
@@ -169,7 +169,7 @@ Triple Kick
 Thief
 Spider Web
 Mind Reader
-Nightmare
+HP Ghost
 Flame Wheel
 Snore
 Curse
@@ -207,7 +207,7 @@ Rollout
 False Swipe
 Swagger
 Milk Drink
-Spark
+Wild Charge
 Fury Cutter
 Steel Wing
 Mean Look
@@ -220,14 +220,14 @@ Frustration
 Safeguard
 Pain Split
 Sacred Fire
-Magnitude
+Bulldoze
 Dynamic Punch
 Megahorn
 Dragon Breath
 Baton Pass
 Encore
 Pursuit
-Rapid Spin
+HP Fire
 Sweet Scent
 Iron Tail
 Metal Claw
@@ -253,7 +253,7 @@ Beat Up
 Fake Out
 Uproar
 Stockpile
-Spit Up
+HP Rock
 Swallow
 Heat Wave
 Hail
@@ -267,9 +267,9 @@ Smelling Salts
 Follow Me
 Nature Power
 Charge
-Taunt
+HP Dark
 Helping Hand
-Trick
+HP Psychic
 Role Play
 Wish
 Assist
@@ -287,10 +287,10 @@ Skill Swap
 Imprison
 Refresh
 Grudge
-Snatch
+Drill Run
 Secret Power
 Dive
-Arm Thrust
+HP Fighting
 Camouflage
 Tail Glow
 Luster Purge
@@ -298,7 +298,7 @@ Mist Ball
 Feather Dance
 Teeter Dance
 Blaze Kick
-Mud Sport
+HP Ground
 Ice Ball
 Needle Arm
 Slack Off
@@ -341,7 +341,7 @@ Bulk Up
 Bounce
 Mud Shot
 Poison Tail
-Covet
+HP Grass
 Volt Tackle
 Magical Leaf
 Water Sport
@@ -359,7 +359,7 @@ Miracle Eye
 Wake-Up Slap
 Hammer Arm
 Gyro Ball
-Healing Wish
+HP Electric
 Brine
 Natural Gift
 Feint
@@ -375,7 +375,7 @@ Embargo
 Fling
 Psycho Shift
 Trump Card
-Heal Block
+Aqua Cutter
 Wring Out
 Power Trick
 Gastro Acid
@@ -413,7 +413,7 @@ Focus Blast
 Energy Ball
 Brave Bird
 Earth Power
-Switcheroo
+HP Flying
 Giga Impact
 Nasty Plot
 Bullet Punch

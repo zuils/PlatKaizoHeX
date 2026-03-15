@@ -17,6 +17,7 @@ public enum BattleTemplateToken : byte
     // Standard tokens
     Shiny,
     Ability,
+    MetLocation,
     Nature,
     Friendship,
     EVs,

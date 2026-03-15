@@ -11,7 +11,7 @@ namespace PKHeX.Core;
 public sealed class GameStrings : IBasicStrings
 {
     // PKM Info
-    public readonly string[] specieslist, movelist, itemlist, abilitylist, types, natures, forms,
+    public readonly string[] specieslist, movelist, itemlist, abilitylist, metlocations, types, natures, forms,
         memories, genloc, feeling6, feeling8, intensity,
         trainingbags, trainingstage, characteristics,
         groundtiletypes, balllist, gamelist, pokeblocks, ribbons;
@@ -39,6 +39,7 @@ public sealed class GameStrings : IBasicStrings
     public IReadOnlyList<string> Item => itemlist;
     public IReadOnlyList<string> Move => movelist;
     public IReadOnlyList<string> Ability => abilitylist;
+    public IReadOnlyList<string> MetLocation => metlocations;
     public IReadOnlyList<string> Types => types;
     public IReadOnlyList<string> Natures => natures;
 
@@ -84,6 +85,7 @@ public sealed class GameStrings : IBasicStrings
         natures = Util.GetNaturesList(langFilePrefix);
         types = Get("types");
         abilitylist = Get("abilities");
+        metlocations = Get("metlocations");
 
         movelist = Get("moves");
         // Differentiate Physical/Special Z-Moves

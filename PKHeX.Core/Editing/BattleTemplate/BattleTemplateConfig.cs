@@ -59,6 +59,7 @@ public sealed record BattleTemplateConfig
     [
         BattleTemplateToken.FirstLine,
         BattleTemplateToken.Ability,
+        BattleTemplateToken.MetLocation,
         BattleTemplateToken.Level,
         BattleTemplateToken.Shiny,
         BattleTemplateToken.Friendship,
@@ -77,6 +78,7 @@ public sealed record BattleTemplateConfig
     [
         BattleTemplateToken.FirstLine,
         BattleTemplateToken.AbilityHeldItem,
+        BattleTemplateToken.MetLocation,
         BattleTemplateToken.Moves,
         BattleTemplateToken.EVsAppendNature,
         BattleTemplateToken.IVs,
@@ -93,6 +95,7 @@ public sealed record BattleTemplateConfig
         // First line is handled manually.
         BattleTemplateToken.HeldItem,
         BattleTemplateToken.Ability,
+        BattleTemplateToken.MetLocation,
         BattleTemplateToken.Level,
         BattleTemplateToken.Shiny,
         BattleTemplateToken.DynamaxLevel,

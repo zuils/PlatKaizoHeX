@@ -59,6 +59,11 @@ public partial class SAVEditor : UserControl, ISlotViewer<PictureBox>, ISaveFile
         }
     }
 
+    public TabPage PartyTab => Tab_PartyBattle;
+    public TabPage BoxTab => Tab_Box;
+    public TabControl TabControl => tabBoxMulti;
+    public BoxEditor BoxEditor => Box;
+
     public void ReloadSlots()
     {
         UpdateBoxViewers(all: true);

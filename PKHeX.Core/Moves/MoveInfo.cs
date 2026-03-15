@@ -228,10 +228,12 @@ public static class MoveInfo
     public static byte GetType(ushort move, EntityContext context) => context switch
     {
         Gen1 => GetType(move, MoveInfo1.Type), // Bite, Gust, Karate Chop, Sand Attack
-        >= Gen2 and <= Gen5 => GetType(move, MoveInfo5.Type), // Charm, Moonlight, Sweet Kiss
+        >= Gen2 and <= Gen3 => GetType(move, MoveInfo5.Type), // Charm, Moonlight, Sweet Kiss
+        Gen4 => GetType(move, MoveInfo4.Type),
+        Gen5 => GetType(move, MoveInfo5.Type),
         _ => GetType(move, MoveInfo9.Type),
     };
-
+        
     private static byte GetType(ushort move, ReadOnlySpan<byte> types)
     {
         if (move >= types.Length)

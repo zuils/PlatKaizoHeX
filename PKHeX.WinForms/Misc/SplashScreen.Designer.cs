@@ -41,7 +41,7 @@ namespace PKHeX.WinForms
             L_Status.Name = "L_Status";
             L_Status.Size = new System.Drawing.Size(113, 15);
             L_Status.TabIndex = 0;
-            L_Status.Text = "Starting up PKHeX...";
+            L_Status.Text = "Starting up PlatKaizoHeX...";
             // 
             // L_Site
             // 
