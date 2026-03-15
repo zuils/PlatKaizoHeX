@@ -2,7 +2,7 @@
 Pound
 Karate Chop
 Double Slap
-Water Ball
+Weather Ball (Water)
 Mega Punch
 Pay Day
 Fire Punch
@@ -28,7 +28,7 @@ Jump Kick
 Rolling Kick
 Sand Attack
 Headbutt
-Fire Ball
+Weather Ball (Fire)
 Fury Attack
 Horn Drill
 Tackle
@@ -109,7 +109,7 @@ Minimize
 Smokescreen
 Confuse Ray
 Withdraw
-Rock Ball
+Weather Ball (Rock)
 Barrier
 Light Screen
 Haze
@@ -129,7 +129,7 @@ Waterfall
 Clamp
 Swift
 Solar-Beam
-Hail Ball
+Weather Ball (Hail)
 Constrict
 Amnesia
 Kinesis
@@ -344,7 +344,7 @@ Poison Tail
 HP Grass
 Volt Tackle
 Magical Leaf
-Water Sport
+Scald
 Calm Mind
 Leaf Blade
 Dragon Dance

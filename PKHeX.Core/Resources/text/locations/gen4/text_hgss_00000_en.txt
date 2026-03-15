@@ -100,12 +100,12 @@ Poffin House
 Celestica Ruins
 Pokémon Day Care
 Veilstone Store
-Game Corner
+Casino
 Canalave Library
 Vista Lighthouse
-Distortion Zone 2
+Distortion World (Zone 2)
 Pokémon Mansion
-Distortion Zone 1
+Distortion World (Zone 1)
 Café
 Grand Lake
 Restaurant
@@ -113,12 +113,12 @@ Battle Park
 Battle Frontier
 Battle Factory
 Battle Castle
-Battle Arcade
+Coronet Highlands
 Battle Hall
 Distortion World
 Lost Tower
 The Underground
-Distortion Zone 3
+Distortion World (Zone 3)
 ROTOM’s Room
 T.G. Eterna Bldg
 Iron Ruins
