@@ -19,6 +19,7 @@
   { "Token": "GVs", "Text": "奋斗等级: " },
   { "Token": "Level", "Text": "等級: " },
   { "Token": "Ability", "Text": "特性: " },
+  { "Token": "MetLocation", "Text": "Location: " },
   { "Token": "DynamaxLevel", "Text": "極巨化等級: " },
   { "Token": "TeraType", "Text": "太晶屬性: " },
   { "Token": "Nature", "Text": "性格: " },

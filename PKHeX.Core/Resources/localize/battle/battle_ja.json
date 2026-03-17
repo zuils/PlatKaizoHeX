@@ -19,6 +19,7 @@
   { "Token": "GVs", "Text": "頑張る " },
   { "Token": "Level", "Text": "Lv " },
   { "Token": "Ability", "Text": "特性 " },
+  { "Token": "MetLocation", "Text": "Location: " },
   { "Token": "DynamaxLevel", "Text": "ダイマックスレベル " },
   { "Token": "TeraType", "Text": "テラスタイプ " },
   { "Token": "Gender", "Text": "性別 "},

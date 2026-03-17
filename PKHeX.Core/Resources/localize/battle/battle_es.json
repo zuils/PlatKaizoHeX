@@ -19,6 +19,7 @@
   { "Token": "GVs", "Text": "GVs: " },
   { "Token": "Level", "Text": "Nivel: " },
   { "Token": "Ability", "Text": "Habilidad: " },
+  { "Token": "MetLocation", "Text": "Location: " },
   { "Token": "DynamaxLevel", "Text": "Nivel Dinamax: " },
   { "Token": "TeraType", "Text": "Teratipo: " },
   { "Token": "Nature", "Text": "Naturaleza " },
