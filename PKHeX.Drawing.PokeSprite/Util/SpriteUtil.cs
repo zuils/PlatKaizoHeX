@@ -318,7 +318,7 @@ public static class SpriteUtil
     public static Image? GetStatusSprite(this StatusCondition value)
     {
         if (value == 0)
-            return null;
+            return Resources.sickfaint;
         if (value < StatusCondition.Poison)
             return Resources.sicksleep;
         if (value.HasFlag(StatusCondition.PoisonBad))
